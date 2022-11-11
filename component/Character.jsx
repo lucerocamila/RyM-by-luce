@@ -18,10 +18,7 @@ const Character = ({location}) => {
         <>
         { isLoading ? (
             <div className='loading2'>
-                <div className='card card1'><p>Loading...</p></div> 
-                <div className='card card1'><p>Loading...</p></div>
-                <div className='card card1'><p>Loading...</p></div>
-                <div className='card card1'><p>loading...</p></div>
+                <img src=".././assets/loading.gif" alt="" />
             </div>
         ) : (
         <div className='card'>
