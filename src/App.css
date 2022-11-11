@@ -75,7 +75,7 @@ z-index: 2px;
   align-items: center;
   justify-content: center;
   padding-top: 8%;
-  padding-bottom: 10%;
+  padding-bottom: 13%;
   background-image: url('../src/assets/giphy .gif');
   background-repeat: no-repeat;
   background-position: center;
@@ -121,6 +121,7 @@ width: 50%;
   background-position: center;
   background-size: cover;
   color: bisque;
+  height: 5vh;
 }
 /* .dimension-container {
 
@@ -135,6 +136,10 @@ width:25%;
 
 }
 
+.btn-search-box{
+  width: auto;
+}
+
 input{
   width: 10vh;
   height: auto;
@@ -142,9 +147,8 @@ input{
   border: none;
   font-size: 70%;
   border-radius: 5px 0 0 5px;
-  font-weight: 600;
   text-align: center;
-  box-shadow: 0 0 15px rgb(51, 255, 0);
+  box-shadow: 0 0 15px rgb(11, 228, 43);
 }
 
  button{
@@ -174,14 +178,7 @@ input{
   justify-content: space-between;
 }
 
-/* @media(max-width:667px){
-  .App .dimension-container .location{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-} */
+
 /* .dimension-container */
  .location .place-info{ 
   display: flex;
@@ -193,12 +190,6 @@ input{
   border-bottom: 3px solid greenyellow  ;
 }
 
-/* @media(max-width:667px){
-  .App .dimension-container .location .place-info{
-    width: 100%;
-    align-items: flex-start;
-  }
-} */
 
 .location .place-info p{
   margin-left: 10px;
