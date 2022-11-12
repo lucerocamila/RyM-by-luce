@@ -66,7 +66,7 @@ function App() {
                 </div>
 
               </div>
-<p>We are at: {RickAndMortyLocation.dimension}</p>
+<p className='title'>We are at: {RickAndMortyLocation.dimension}</p>
               <div className='dimension-container'>
 
                     <div className='place-info'>                    

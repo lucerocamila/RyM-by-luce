@@ -3,14 +3,14 @@ import React, { useEffect, useState } from 'react';
 
 const Character = ({location}) => {
 
-    const [residentcontent, setResidentcontent] = useState({})
+    const [residentInfo, setResidentInfo] = useState({})
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(()=>{
         axios.get(location)
         .then((res) => {
             setIsLoading(false);
-            setResidentcontent(res.data)
+            setResidentInfo(res.data)
         });
     }, [])
 
@@ -18,41 +18,41 @@ const Character = ({location}) => {
         <>
         { isLoading ? (
             <div className='loading2'>
-                <img src=".././assets/loading.gif" alt="" />
+                <div className='card card1'><p>Loading...</p></div> 
+                <div className='card card1'><p>Loading...</p></div>
+                <div className='card card1'><p>Loading...</p></div>
+                <div className='card card1'><p>loading...</p></div>
             </div>
         ) : (
         <div className='card'>
-            <div className='content-img'>
-                <img src={residentcontent.image === undefined ? photoRickAndMorty : residentcontent.image} alt={`Character Photo: ${residentcontent.name}`} />
+            <div className='info-img'>
+                <img src={residentInfo.image} alt={`Character Photo: ${residentInfo.name}`} />
             </div>
-            <div className='content'>
-                    {residentcontent.status === "Alive" ? (
-                        <div className='row-card-content'> 
+            <div className='info'>
+                    {residentInfo.status === "Alive" ? (
+                        <div className='row-card-info'> 
                             <div className='status-content'>
                                 <div className='status' style={{background:"green", boxShadow:"0 0 10px green"}}></div>
                             </div>
-                            <div className='status-content'>
-                                <p>{residentcontent.status} - {residentcontent.species}</p> 
+                            <div className='status-info'>
+                                <p>{residentInfo.status} - {residentInfo.species}</p> 
                             </div>
                         </div>
-                    ) : residentcontent.status === "Dead" ? (
-                        <div className='row-card-content'> 
+                    ) : residentInfo.status === "Dead" ? (
+                        <div className='row-card-info'> 
                             <div className='status-content'>
                                 <div className='status' style={{background:"red", boxShadow:"0 0 10px red"}}></div>
                             </div>
-                            <div className='status-content'>
-                                <p>{residentcontent.status} - {residentcontent.species}</p> 
+                            <div className='status-info'>
+                                <p>{residentInfo.status} - {residentInfo.species}</p> 
                             </div>
                         </div>
                     ) : (
-                        <div className='row-card-content'> <div className='status' style={{background:"gray", boxShadow:"0 0 10px gray"}}></div> {residentcontent.status} - {residentcontent.species}</div>
+                        <div className='row-card-info'> <div className='status' style={{background:"gray", boxShadow:"0 0 10px gray"}}></div> {residentInfo.status} - {residentInfo.species}</div>
                     )}
-                    {/* dsps */}
-                      {/* {RickAndMortyLocation.residents?.length === 0 && .main-cards{background:rgb(51, 255, 0)}} */}
-                
-                <p><b>Name:</b> <span>{residentcontent.name}</span></p>
-                <p><b>Origin: </b> <span>{residentcontent.origin?.name}</span></p>
-                <p><b>Episode: </b> <span>{residentcontent.episode?.length}</span></p>
+                <p><b>Name:</b> <span>{residentInfo.name}</span></p>
+                <p><b>Origin: </b> <span>{residentInfo.origin?.name}</span></p>
+                <p><b>Episode: </b> <span>{residentInfo.episode?.length}</span></p>
             </div>
         </div>
         )}

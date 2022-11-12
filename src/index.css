@@ -14,7 +14,7 @@
     h1{
       font-size: 9vh;
     }
-    p{
+    .title{
       font-size: 5vh;
       margin: 0;
     }
@@ -63,23 +63,3 @@
 
 
 
-/* .header-img{
-    margin-top: 2%;
-    left: 30%;
-} */
-
-
-/* @media(max-width: 600px){
-    .title{
-      font-size: 60px;
-      position: absolute;
-      top: 0;
-      left: 30%;
-      width: 100%;
-      font-size: 5vh;
-     color: rgb(255, 255, 255);
-     text-shadow: 0 0 10px rgb(6, 218, 179);
-     margin-top: 0;
-
-}
-  } */
